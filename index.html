@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pepsi Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#"><img src="/images/logo.png" alt="logo" /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textbox">
+          <h2>That's What <br /><span>I Like</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
+            tenetur quo nesciunt, nisi, voluptatem quasi in ipsam similique
+            reprehenderit natus consequatur cum, reiciendis ipsum? Hic soluta
+            quo impedit obcaecati dicta?
+          </p>
+          <a href="#">View All Products</a>
+        </div>
+        <div class="imgbox">
+          <img src="/images/pepsi001.png" class="pepsi" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="/images/pepsi001.png"
+            onclick="imgslider('/images/pepsi001.png');bgColorChange('#0062be')"
+          />
+        </li>
+        <li>
+          <img
+            src="/images/pepsi002.png"
+            onclick="imgslider('/images/pepsi002.png');bgColorChange('#e60c2c')"
+            bgColorChange="#"
+          />
+        </li>
+        <li>
+          <img
+            src="/images/pepsi003.png"
+            onclick="imgslider('/images/pepsi003.png');bgColorChange('#1e1e1e')"
+          />
+        </li>
+      </ul>
+
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="/images/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/images/instagram.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/images/twitter.png" /></a>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      function imgslider(image) {
+        document.querySelector(".pepsi").src = image;
+      }
+
+      function bgColorChange(color) {
+        const sec = document.querySelector(".sec");
+        sec.style.background = color;
+      }
+    </script>
+  </body>
+</html>
